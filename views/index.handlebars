@@ -1,0 +1,28 @@
+<h1>Burgers</h1>
+
+<p>!!!!</p>
+
+<ul>
+    {{#each burgers}}
+        <li>
+            <p><span class="label">ID:</span> {{this.burger_id}}</p>
+            <p><span class="label">Name:</span> {{this.burger_name}}</p>
+            <p><span class="label">Devoured:</span> {{this.devoured}}</p>
+
+            <button data-id="{{this.burger_id}}" class="devour">Devour</button>
+
+            <a href="/burgers/{{this.burger_id}}">Update this burger</a>
+        </li>
+    {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+
+<form class="create-form">
+    <div class="form-group">
+        <label for="burger_name">Name:</label>
+        <input type="text" id="burger_name" name="burger_name">
+    </div>
+
+    <button type="submit">Add Burger</button>
+</form>

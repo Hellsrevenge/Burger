@@ -1,0 +1,16 @@
+<h1>Edit Burger</h1>
+
+<form class="create-form">
+    <input type="hidden" id="burger_id" name="burger_id" value="{{burger.burger_id}}">
+    <div class="form-group">
+        <label for="burger_name">Name:</label>
+        <input type="text" id="burger_name" name="burger_name" value="{{burger.burger_name}}">
+    </div>
+
+    <div class="form-group">
+        <label for="devoured">Devoured:</label>
+        <input type="text" id="devoured" name="devoured" value="{{burger.devoured}}">
+    </div>
+
+    <button type="submit">Update Burger</button>
+</form>
