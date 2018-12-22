@@ -1,19 +1,20 @@
-require('orm.js');
+var orm = require('../config/orm');
+
 var table = 'burgers';
 
 var burger = {
     selectAll: function () {
-        orm.selectAll(table, function() {
+        orm.selectAll(table, function(data) {
+            console.log(data);
+        });
+    },
+    insertOne: function (values) {
+        orm.insertOne(table, values, function(data) {
 
         });
     },
-    insertOne: function (data) {
-        orm.insertOne(table, function() {
-
-        });
-    },
-    updateOne: function (burger_id, data) {
-        orm.updateOne(table, 'burger_id', burger_id, data, function() {
+    updateOne: function (burger_id, values) {
+        orm.updateOne(table, 'burger_id', burger_id, values, function(data) {
 
         });
     }

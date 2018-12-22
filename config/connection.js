@@ -8,4 +8,4 @@ var connection = mysql.createConnection({
     database: "burgers_db"
 });
 
-module.exports(connection);
+module.exports = connection;
