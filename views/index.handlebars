@@ -1,28 +1,41 @@
-<h1>Burgers</h1>
-
-<p>!!!!</p>
-
-<ul>
-    {{#each burgers}}
-        <li>
-            <p><span class="label">ID:</span> {{this.burger_id}}</p>
-            <p><span class="label">Name:</span> {{this.burger_name}}</p>
-            <p><span class="label">Devoured:</span> {{this.devoured}}</p>
-
-            <button data-id="{{this.burger_id}}" class="devour">Devour</button>
-
-            <a href="/burgers/{{this.burger_id}}">Update this burger</a>
-        </li>
-    {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-
-<form class="create-form">
-    <div class="form-group">
-        <label for="burger_name">Name:</label>
-        <input type="text" id="burger_name" name="burger_name">
+<div class="container">
+    <h1>Russian Burgers YUM!!!</h1>
+    <div id="logo">
+        <img src="assets/img/1.png">
     </div>
 
-    <button type="submit">Add Burger</button>
-</form>
+    <section id="burgers">
+        <div id="burgersfresh">
+        {{#each burgers}}
+            {{#unless this.devoured}}
+                <div class="burger">
+                    <span>{{this.burger_name}}</span>
+                    <form action="/burgers/{{this.burger_id}}?_method=PUT" method="POST">
+                        <button class="btn">Devour</button>
+                    </form>
+                </div>
+            {{/unless}}
+        {{/each}}
+        </div>
+        <div id="burgersdevoured">
+            {{#each burgers}}
+                {{#if this.devoured}}
+                    <div class="devoured">
+                        <span>{{this.burger_name}}</span>
+                    </div>
+                {{/if}}
+            {{/each}}
+        </div>
+    </section>
+    <div class="clear"></div>
+
+    <h2>Add a Yummy you want to eat!</h2>
+
+    <form class="create-form" method="POST" action="/burgers">
+        <div class="form-group">
+            <input type="text" id="burger_name" name="burger_name">
+        </div>
+
+        <button type="submit">Add Piroshki</button>
+    </form>
+</div>

@@ -8,9 +8,18 @@ router.get('/', function (req, res) {
     });
 });
 
-router.get('/:burger_id', function (req, res) {
-    burger.selectOne(req.params.burger_id, function (burger) {
-        res.render('edit', {burger: burger});
+
+router.post("/burgers", function(req, res) {
+    burger.insertOne(req.body, function () {
+        res.redirect("/");
+    });
+});
+
+
+router.put("/burgers/:burger_id", function(req, res) {
+    burger.updateOne(req.params.burger_id, {devoured:1}, function () {
+
+        res.redirect("/");
     });
 });
 

@@ -15,14 +15,18 @@ var burger = {
             call_back(data);
         });
     },
-    insertOne: function (values) {
+    insertOne: function (values,call_back) {
         orm.insertOne(table, values, function (data) {
             console.log("[INSERT] burger " + JSON.stringify(values));
+            call_back(data);
         });
     },
-    updateOne: function (burger_id, values) {
+    updateOne: function (burger_id, values, call_back) {
+        console.log(burger_id);
+        console.log(values);
         orm.updateOne(table, 'burger_id', burger_id, values, function (data) {
             console.log("[UPDATE] burger:" + burger_id + " " + JSON.stringify(values));
+            call_back(data);
         });
     }
 };

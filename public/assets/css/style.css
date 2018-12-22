@@ -1,0 +1,53 @@
+body {
+background: url("/assets/img/bg.png");
+    text-align: center;
+}
+.container {
+    background-color: linen;
+    width:500px;
+    margin:0 auto;
+    padding:50px;
+}
+#burgers {
+    width:450px;
+    margin:0 auto;
+}
+
+.burger {
+    float: left;
+    width:200px;
+    height: 30px;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-right: 50px;
+}
+
+.burger form{
+    float:right;
+    height: 20px;
+}
+.devoured {
+    float: right;
+    width:200px;
+    height: 30px;
+    margin-bottom: 5px;
+    text-align: left;
+    vertical-align: top;
+
+}
+
+.clear {
+    clear: both;
+}
+
+#logo img {
+    width: 17%;
+}
+#burgersfresh{
+    float:left;
+    width:200px;
+}
+#burgersdevoured{
+ float:right;
+    width:200px;
+}
