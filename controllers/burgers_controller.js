@@ -3,4 +3,4 @@ require('burger.js');
 
 var router = {};
 
-module.exports(router);
+module.exports = router;
