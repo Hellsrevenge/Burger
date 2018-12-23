@@ -8,4 +8,11 @@ var connection = mysql.createConnection({
     database: process.env.CLEARDB_NAME
 });
 
+connection.connect(function(err) {
+    if (err) {
+        console.log(err);
+        return;
+    }
+});
+
 module.exports = connection;
