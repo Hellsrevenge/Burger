@@ -12,5 +12,5 @@ Burger is a restaurant app that lets users input the names of burgers they'd lik
 - Handlebars.js 
 - MySQL
 # Demo
-Please follow the link to [Heroku](https://russian-burger.herokuapp.com/) deployment to see the demo of the project.
+Please follow the link to [Heroku](https://russian-burger.herokuapp.com/) deployment to play with the project.
 
