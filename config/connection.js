@@ -1,6 +1,6 @@
 var mysql = require("mysql");
 var config = {
-    host: process.env.CLEARDB_DATABASE_HOST,
+    host: process.env.CLEARDB_HOST,
     port: 3306,
     user: process.env.CLEARDB_USER,
     password: process.env.CLEARDB_PASSWORD,
