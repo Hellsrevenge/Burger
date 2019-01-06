@@ -7,7 +7,7 @@ var config = {
     database: process.env.CLEARDB_NAME
 };
 
-var connection = mysql.createConnection(process.env.CLEARDB_DATABASE_URL);
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
 connection.connect(function (err) {
     if (err) {
